@@ -7,8 +7,10 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+//Responsible for parsing the incoming request
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+//Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it
 const methodOverride = require('method-override')
 
 const app = express();
