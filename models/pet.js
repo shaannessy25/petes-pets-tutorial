@@ -20,6 +20,7 @@ const PetSchema = new Schema(
     favoriteFood: { type: String, required: true },
     description: { type: String, minlength: 140, required: true },
     price: {type: Number, required: true },
+    index: ({ name: 'text', species: 'text', favoriteFood: 'text', description: 'text' }, {name: 'My text index', weights: {name: 10, species: 4, favoriteFood: 2, description: 1}});
   },
   {
     timestamps: true,
